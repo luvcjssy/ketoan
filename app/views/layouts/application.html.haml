@@ -6,4 +6,14 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
+    %hr
+    %h3 Menu
+    %ul
+      - Category.where(:active => true, :parent_id => 0).order(order: 'DESC').each do |category|
+        %li
+          = category.title.mb_chars.upcase
+          %ul
+            - Category.where(:active => true, :parent_id => category.id).order(order: 'DESC').each do |child_category|
+              %li= child_category.title.titleize
+    %hr
     = yield
