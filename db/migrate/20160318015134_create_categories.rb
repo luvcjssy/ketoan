@@ -3,7 +3,7 @@ class CreateCategories < ActiveRecord::Migration
     create_table :categories do |t|
       t.string :title
       t.integer :order
-      t.boolean :active
+      t.boolean :active, :default => true
       t.integer :parent_id
 
       t.timestamps null: false
