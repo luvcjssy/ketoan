@@ -33,23 +33,23 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 # Use html template engine
-gem 'haml'
+gem 'haml', '~> 4.0.7'
 
 # Authenticate
-gem 'devise'
+gem 'devise', '~> 3.5.6'
 
 # Authorized
-gem 'cancancan'
+gem 'cancancan', '~> 1.13.1'
 
 # Admin page
-gem 'rails_admin'
+gem 'rails_admin', '~> 0.8.1'
 
 # Show history modified model
-gem 'paper_trail'
-gem 'rails_admin_history_rollback'
+gem 'paper_trail', '~> 4.1.0'
+gem 'rails_admin_history_rollback', '~> 0.0.6'
 
 # Text editor
-gem "wysiwyg-rails"
+gem "wysiwyg-rails", '~> 1.2.8'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -198,24 +198,24 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-  cancancan
+  cancancan (~> 1.13.1)
   coffee-rails (~> 4.1.0)
-  devise
-  haml
+  devise (~> 3.5.6)
+  haml (~> 4.0.7)
   jbuilder (~> 2.0)
   jquery-rails
   mysql2 (>= 0.3.13, < 0.5)
-  paper_trail
+  paper_trail (~> 4.1.0)
   rails (= 4.2.5)
-  rails_admin
-  rails_admin_history_rollback
+  rails_admin (~> 0.8.1)
+  rails_admin_history_rollback (~> 0.0.6)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
   turbolinks
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
-  wysiwyg-rails
+  wysiwyg-rails (~> 1.2.8)
 
 BUNDLED WITH
    1.11.2
