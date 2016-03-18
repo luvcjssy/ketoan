@@ -2,8 +2,8 @@ Rails.application.routes.draw do
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
-  resources :news, only: [:index]
+  resources :posts, only: [:index]
 
-  root 'news#index'
+  root 'posts#index'
 
 end

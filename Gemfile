@@ -48,6 +48,9 @@ gem 'rails_admin'
 gem 'paper_trail'
 gem 'rails_admin_history_rollback'
 
+# Text editor
+gem "wysiwyg-rails"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
