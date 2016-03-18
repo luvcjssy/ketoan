@@ -6,7 +6,6 @@ class Post < ActiveRecord::Base
 
     edit do
       include_all_fields
-      field :description, :text
       field :content, :froala
     end
 

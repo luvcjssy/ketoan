@@ -14,7 +14,7 @@
     %hr
     %h3 Menu
     %ul
-      - Category.where(:active => true, :parent_id => 0).order(order: 'DESC').each do |category|
+      - Category.where(:active => true, :parent_id => [0, nil]).order(order: 'DESC').each do |category|
         %li
           = category.title.mb_chars.upcase
           %ul

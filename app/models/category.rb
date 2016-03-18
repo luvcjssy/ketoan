@@ -7,9 +7,9 @@ class Category < ActiveRecord::Base
       include_all_fields
       field :parent_id, :enum do
         enum do
-          Category.where(:parent_id => 0).map { |c| [c.title, c.id] }
+          parent_category = Category.where(:parent_id => [0, nil]).map { |c| [c.title, c.id] }
+          parent_category.insert(0,'----- Select Parent Category -----')
         end
-
       end
     end
   end
