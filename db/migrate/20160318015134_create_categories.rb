@@ -4,7 +4,7 @@ class CreateCategories < ActiveRecord::Migration
       t.string :title
       t.integer :order
       t.boolean :active, :default => true
-      t.integer :parent_id
+      t.integer :parent_id, :default => 0
 
       t.timestamps null: false
     end
