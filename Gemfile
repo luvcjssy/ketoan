@@ -35,6 +35,19 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use html template engine
 gem 'haml'
 
+# Authenticate
+gem 'devise'
+
+# Authorized
+gem 'cancancan'
+
+# Admin page
+gem 'rails_admin'
+
+# Show history modified model
+gem 'paper_trail'
+gem 'rails_admin_history_rollback'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
