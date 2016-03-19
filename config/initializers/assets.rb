@@ -10,5 +10,5 @@ Rails.application.config.assets.version = '1.0'
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
 Rails.application.config.assets.precompile += %w(rails_admin/custom/theming.css rails_admin/custom/ui.js)
-Rails.application.config.assets.precompile += %w( website.assets.min.js )
-Rails.application.config.assets.precompile += %w( website.min.js )
+# Rails.application.config.assets.precompile += %w( website.assets.min.js )
+# Rails.application.config.assets.precompile += %w( website.min.js )

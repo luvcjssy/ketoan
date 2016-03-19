@@ -1,1 +1,103 @@
-%h1 Index
+.moto-widget.moto-widget-row.row-fixed{"data-widget" => "row"}
+  .container-fluid
+    .row
+      .moto-cell.col-sm-12{"data-container" => "container"}
+        .moto-widget.moto-widget-text.moto-preset-default.wow.moto-spacing-top-medium.moto-spacing-right-auto.moto-spacing-bottom-auto.moto-spacing-left-auto.fadeInLeft{"data-animation" => "fadeInLeft", "data-preset" => "default", "data-spacing" => "maaa", "data-widget" => "text"}
+          .moto-widget-text-content.moto-widget-text-editable
+            %p.moto-text_system_4{:style => "text-align: center;"}
+              NHÂN LỰC KẾ TOÁN
+              %br/
+        .moto-widget.moto-widget-spacer.moto-preset-default{"data-preset" => "default", "data-spacing" => "", "data-widget" => "spacer"}
+          .moto-widget-spacer-block{:style => "height: 5px;"}
+        .moto-widget.moto-widget-row{"data-widget" => "row"}
+          .container-fluid
+            .row
+              .moto-cell.col-sm-3{"data-container" => "container"}
+              .moto-cell.col-sm-6{"data-container" => "container"}
+                .moto-widget.moto-widget-text.moto-preset-default.wow.fadeInRight.moto-spacing-top-auto.moto-spacing-right-auto.moto-spacing-bottom-large.moto-spacing-left-auto{"data-animation" => "fadeInRight", "data-preset" => "default", "data-spacing" => "aala", "data-widget" => "text"}
+                  .moto-widget-text-content.moto-widget-text-editable
+                    %p.moto-text_system_9{:style => "text-align: center;"}
+                      %span.moto-color1_4 Giới thiệu việc làm. Cung cấp nhân sự.
+                      %br/
+              .moto-cell.col-sm-3{"data-container" => "container"}
+        .moto-widget.moto-widget-row{"data-widget" => "row"}
+          .container-fluid
+            .row
+              - unless @recruitments.blank?
+                - @recruitments.each do |recruitment|
+                  .moto-cell.col-sm-4{"data-container" => "container"}
+                    .moto-widget.moto-widget-image.moto-preset-3.moto-align-center.moto-spacing-top-auto.moto-spacing-right-auto.moto-spacing-bottom-auto.moto-spacing-left-auto{"data-preset" => "3", "data-spacing" => "aaaa", "data-widget" => "image"}
+                      %a.moto-widget-image-link.moto-link{"data-action" => "lightbox", :href => asset_path(recruitment.thumbnail.url(:large))}
+                        = image_tag recruitment.thumbnail.url(:large), class: 'moto-widget-image-picture', :draggable => "false"
+                    .moto-widget.moto-widget-container.moto-container_content_56e4ac2d{"data-container" => "container", "data-css-name" => "moto-container_content_56e4ac2d", "data-widget" => "container"}
+                      .moto-widget.moto-widget-text.moto-preset-default.moto-spacing-top-medium.moto-spacing-right-auto.moto-spacing-bottom-auto.moto-spacing-left-auto{"data-preset" => "default", "data-spacing" => "maaa", "data-widget" => "text"}
+                        .moto-widget-text-content.moto-widget-text-editable
+                          %p.moto-text_system_8{:style => "text-align: center;"}
+                            %a.moto-link{"data-action" => "url", "data-cke-saved-href" => "#", :href => "#", :target => "_self"}
+                              = recruitment.title
+                            %br/
+                      .moto-widget.moto-widget-spacer.moto-preset-default{"data-preset" => "default", "data-spacing" => "", "data-widget" => "spacer"}
+                        .moto-widget-spacer-block{:style => "height: 5px;"}
+                      .moto-widget.moto-widget-text.moto-preset-default.moto-spacing-top-auto.moto-spacing-right-auto.moto-spacing-bottom-auto.moto-spacing-left-auto{"data-preset" => "default", "data-spacing" => "aaaa", "data-widget" => "text"}
+                        .moto-widget-text-content.moto-widget-text-editable
+                          %p.moto-text_system_6{:style => "text-align: center;"}
+                            = recruitment.created_at.strftime("%d/%m/%Y")
+                            %br/
+                      .moto-widget.moto-widget-text.moto-preset-default.moto-spacing-top-small.moto-spacing-right-medium.moto-spacing-bottom-medium.moto-spacing-left-medium{"data-preset" => "default", "data-spacing" => "smmm", "data-widget" => "text"}
+                        .moto-widget-text-content.moto-widget-text-editable
+                          %p.moto-text_system_10{:style => "text-align: center;"}
+                            = recruitment.description
+                            %br/
+                      .moto-widget.moto-widget-button.moto-preset-3.moto-align-center.moto-spacing-top-auto.moto-spacing-right-auto.moto-spacing-bottom-medium.moto-spacing-left-auto{"data-preset" => "3", "data-spacing" => "aama", "data-widget" => "button"}
+                        %a.moto-widget-button-link.moto-size-medium.moto-link{"data-action" => "page", "data-anchor" => "", "data-size" => "medium", :href => "/more/"}
+                          %span.fa.moto-widget-theme-icon
+                          %span.moto-widget-button-label Learn more &gt;&gt;
+              
+/ ====================== RECENT NEWS ======================
+.moto-widget.moto-widget-container.moto-container_content_56e48a87{"data-container" => "container", "data-css-name" => "moto-container_content_56e48a87", "data-widget" => "container"}
+  .moto-widget.moto-widget-row.row-fixed{"data-widget" => "row"}
+    .container-fluid
+      .row
+        .moto-cell.col-sm-12{"data-container" => "container"}
+          .moto-widget.moto-widget-text.moto-preset-default.wow.fadeInLeft.moto-spacing-top-large.moto-spacing-right-auto.moto-spacing-bottom-auto.moto-spacing-left-auto{"data-animation" => "fadeInLeft", "data-preset" => "default", "data-spacing" => "laaa", "data-widget" => "text"}
+            .moto-widget-text-content.moto-widget-text-editable
+              %p.moto-text_system_4{:style => "text-align: center;"}
+                %span.moto-color5_5 Tin tức mới nhất
+                %br/
+          .moto-widget.moto-widget-spacer.moto-preset-default{"data-preset" => "default", "data-spacing" => "", "data-widget" => "spacer"}
+            .moto-widget-spacer-block{:style => "height: 5px;"}
+          .moto-widget.moto-widget-row{"data-widget" => "row"}
+            .container-fluid
+              .row
+                .moto-cell.col-sm-3{"data-container" => "container"}
+                .moto-cell.col-sm-6{"data-container" => "container"}
+                  .moto-widget.moto-widget-text.moto-preset-default.wow.fadeInRight.moto-spacing-top-auto.moto-spacing-right-auto.moto-spacing-bottom-large.moto-spacing-left-auto{"data-animation" => "fadeInRight", "data-preset" => "default", "data-spacing" => "aala", "data-widget" => "text"}
+                    .moto-widget-text-content.moto-widget-text-editable
+                      %p.moto-text_system_9{:style => "text-align: center;"}
+                        %span.moto-color5_5 Các thông tin nóng hổi mới nhất về kế toán
+                        %br/
+                .moto-cell.col-sm-3{"data-container" => "container"}
+          .moto-widget.moto-widget-row{"data-widget" => "row"}
+            .container-fluid
+              .row
+                - unless @recent_news.blank?
+                  - @recent_news.each do |recent_new|
+                    .moto-cell.col-sm-4{"data-container" => "container"}
+                      .moto-widget.moto-widget-text.moto-preset-default.wow.fadeInDown.moto-spacing-top-auto.moto-spacing-right-auto.moto-spacing-bottom-small.moto-spacing-left-auto{"data-animation" => "fadeInDown", "data-preset" => "default", "data-spacing" => "aasa", "data-widget" => "text"}
+                        .moto-widget-text-content.moto-widget-text-editable
+                          %p.moto-text_system_5
+                            = recent_new.title
+                            %br/
+                      .moto-widget.moto-widget-text.moto-preset-default.wow.fadeInDown.moto-spacing-top-small.moto-spacing-right-auto.moto-spacing-bottom-medium.moto-spacing-left-auto{"data-animation" => "fadeInDown", "data-preset" => "default", "data-spacing" => "sama", "data-widget" => "text"}
+                        .moto-widget-text-content.moto-widget-text-editable
+                          %p.moto-text_system_10
+                            %span.moto-color5_5= recent_new.description
+                            %br/
+                      .moto-widget.moto-widget-button.moto-preset-5.moto-align-left.moto-spacing-top-auto.moto-spacing-right-auto.moto-spacing-bottom-medium.moto-spacing-left-auto.wow.fadeInDown{"data-preset" => "5", "data-spacing" => "aama", "data-widget" => "button"}
+                        %a.moto-widget-button-link.moto-size-small.moto-link{"data-action" => "page", "data-anchor" => "", "data-size" => "small", :href => "/more/"}
+                          %span.fa.moto-widget-theme-icon
+                          %span.moto-widget-button-label Learn more &gt;&gt;
+                      .moto-widget.moto-widget-spacer.moto-preset-default{"data-preset" => "default", "data-spacing" => "", "data-widget" => "spacer"}
+                        .moto-widget-spacer-block{:style => "height:30px"}
+                
+          
