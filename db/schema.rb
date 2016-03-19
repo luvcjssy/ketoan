@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160318083356) do
+ActiveRecord::Schema.define(version: 20160319061215) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "title",      limit: 255
@@ -23,13 +23,17 @@ ActiveRecord::Schema.define(version: 20160318083356) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string   "title",       limit: 255
-    t.text     "description", limit: 65535
-    t.text     "content",     limit: 65535
-    t.boolean  "active",                    default: true
-    t.integer  "category_id", limit: 4
-    t.datetime "created_at",                               null: false
-    t.datetime "updated_at",                               null: false
+    t.string   "title",                  limit: 255
+    t.text     "description",            limit: 65535
+    t.text     "content",                limit: 65535
+    t.boolean  "active",                               default: true
+    t.integer  "category_id",            limit: 4
+    t.datetime "created_at",                                          null: false
+    t.datetime "updated_at",                                          null: false
+    t.string   "thumbnail_file_name",    limit: 255
+    t.string   "thumbnail_content_type", limit: 255
+    t.integer  "thumbnail_file_size",    limit: 4
+    t.datetime "thumbnail_updated_at"
   end
 
   create_table "roles", force: :cascade do |t|
