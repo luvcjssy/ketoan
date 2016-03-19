@@ -7,7 +7,8 @@ class Post < ActiveRecord::Base
                         :thumb => "100x100#",
                         :small  => "150x150>",
                         :medium => "200x200",
-                        :large => "300x300>" }
+                        :large => "300x300>" },
+                    default_url: ActionController::Base.helpers.asset_path('no_image.gif')
   validates_attachment_content_type :thumbnail, :content_type => /\Aimage\/.*\Z/
   # add a delete_thumbnail method:
   attr_accessor :delete_thumbnail

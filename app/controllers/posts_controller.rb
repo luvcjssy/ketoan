@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   	@recent_news = Post.all.order(:created_at => 'DESC').limit(6)
   end
 
-  def intro
+  def show
   end
   
 end
