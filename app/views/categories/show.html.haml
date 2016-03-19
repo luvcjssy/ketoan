@@ -24,7 +24,7 @@
               .container-fluid
                 .row
                   - unless child_category.posts.blank?
-                    - child_category.posts.order(:created_at => 'DESC').each do |post|
+                    - child_category.posts.where(:active => true).order(:created_at => 'DESC').each do |post|
                       .moto-cell.col-sm-3{"data-container" => "container"}
                         .moto-widget.moto-widget-image.moto-preset-default.moto-align-center.moto-spacing-top-auto.moto-spacing-right-auto.moto-spacing-bottom-small.moto-spacing-left-auto.wow.fadeInDown{"data-preset" => "default", "data-spacing" => "aasa", "data-widget" => "image", :style => "visibility: visible; animation-name: fadeInDown;"}
                           .moto-widget-image-link

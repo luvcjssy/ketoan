@@ -96,7 +96,7 @@
                             %ul.moto-widget-menu-sublist
                               - child_categories.each do |child_category|
                                 %li.moto-widget-menu-item
-                                  %a.moto-widget-menu-link.moto-widget-menu-link-level-2.moto-link{"data-action" => "page", :href => "/"}
+                                  %a.moto-widget-menu-link.moto-widget-menu-link-level-2.moto-link{"data-action" => "page", :href => posts_category_path(child_category)}
                                     = child_category.title.titleize
                   .moto-widget.moto-widget-spacer.moto-preset-default{"data-preset" => "default", "data-spacing" => "", "data-widget" => "spacer"}
                     .moto-widget-spacer-block{:style => "height: 15px;"}

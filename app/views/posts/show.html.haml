@@ -27,17 +27,6 @@
                     %span.moto-widget-blog-post-author-text Demo User
         .moto-widget.moto-widget-spacer.moto-preset-default.moto-spacing-top-auto.moto-spacing-right-auto.moto-spacing-bottom-auto.moto-spacing-left-auto{"data-preset" => "default", "data-spacing" => "aaaa", "data-widget" => "spacer"}
           .moto-widget-spacer-block{:style => "height: 10px;"}
-        .moto-widget.moto-widget-social-buttons.moto-preset-default.moto-align-left.moto-spacing-top-auto.moto-spacing-right-auto.moto-spacing-bottom-small.moto-spacing-left-auto{"data-preset" => "default", "data-spacing" => "aasa", "data-widget" => "social_buttons"}
-          %ul.social-buttons-list
-            %li.social-button
-              .fb-share-button{"data-href" => "http://template58608.motopreview.com/blog/overalls-with-logo-as-a-method-of-advertising/", "data-layout" => "button_count", "moto-dependency-require" => "facebook"}
-            %li.social-button
-              %a.twitter-share-button{:href => "http://template58608.motopreview.com/blog/overalls-with-logo-as-a-method-of-advertising/", "moto-dependency-require" => "twitter"}
-            %li.social-button
-              #___plus_0{:style => "text-indent: 0px; margin: 0px; padding: 0px; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 85px; height: 20px; background: transparent;"}
-                %iframe#I0_1458393484843{"data-gapiattached" => "true", :frameborder => "0", :hspace => "0", :marginheight => "0", :marginwidth => "0", :name => "I0_1458393484843", :scrolling => "no", :src => "https://apis.google.com/u/0/se/0/_/+1/sharebutton?plusShare=true&amp;usegapi=1&amp;action=share&amp;annotation=bubble&amp;hl=en&amp;origin=file%3A%2F%2F&amp;url=http%3A%2F%2Ftemplate58608.motopreview.com%2Fblog%2Foveralls-with-logo-as-a-method-of-advertising%2F&amp;gsrc=3p&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.vi.22pHJSa9mUA.O%2Fm%3D__features__%2Fam%3DAQ%2Frt%3Dj%2Fd%3D1%2Frs%3DAGLTcCOCCW8RsslyVxp6qnUbMfjw2GanTw#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh%2Conload&amp;id=I0_1458393484843&amp;parent=file%3A%2F%2F&amp;pfname=&amp;rpctoken=30129353", :style => "position: static; top: 0px; width: 85px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;", :tabindex => "0", :title => "+Share", :vspace => "0", :width => "100%"}
-            %li.social-button
-              %script{"data-counter" => "right", "data-url" => "http://template58608.motopreview.com/blog/overalls-with-logo-as-a-method-of-advertising/", "moto-dependency-require" => "linkedin", :type => "IN/Share"}
         .moto-widget.moto-widget-spacer.moto-preset-default.moto-spacing-top-auto.moto-spacing-right-auto.moto-spacing-bottom-auto.moto-spacing-left-auto{"data-preset" => "default", "data-spacing" => "aaaa", "data-widget" => "spacer"}
           .moto-widget-spacer-block{:style => "height: 10px;"}
         .moto-widget.moto-widget-blog-post_content.moto-preset-default.moto-spacing-top-auto.moto-spacing-right-auto.moto-spacing-bottom-small.moto-spacing-left-auto{"data-preset" => "default", "data-spacing" => "aasa", "data-widget" => "blog.post_content"}
@@ -59,8 +48,8 @@
           .moto-widget-blog-recent_posts-title
             .moto-widget.moto-widget-text.moto-preset-default.moto-spacing-top-small.moto-spacing-right-auto.moto-spacing-bottom-small.moto-spacing-left-auto{"data-preset" => "default", "data-spacing" => "aasa"}
               .moto-widget-text-content.moto-widget-text-editable
-                %p.moto-text_system_7 Recent Posts
-          - recent_posts = Post.where(:category_id => @post.category_id).order(:created_at => 'DESC').limit(5)
+                %p.moto-text_system_7 Tin mới
+          - recent_posts = Post.where(:active => true, :category_id => @post.category_id).order(:created_at =>'DESC').limit(5)
           - unless recent_posts.blank?
             %ul.moto-widget-blog-recent_posts-list
               - recent_posts.each do |recent_post|

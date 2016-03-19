@@ -4,7 +4,11 @@ Rails.application.routes.draw do
   devise_for :users
   resources :posts, only: [:index, :show]
   get 'intro/index'
-  resources :categories, only: [:show]
+  resources :categories, only: [:show] do
+    member do
+      get 'posts', to: 'categories#posts'
+    end
+  end
 
   root 'posts#index'
 

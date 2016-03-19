@@ -8,7 +8,7 @@ class Category < ActiveRecord::Base
       field :parent_id, :enum do
         enum do
           parent_category = Category.where(:parent_id => [0, nil]).map { |c| [c.title, c.id] }
-          parent_category.insert(0,'----- Select Parent Category -----')
+          parent_category.insert(0,'Parent Category')
         end
       end
     end
