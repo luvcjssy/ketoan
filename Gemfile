@@ -52,7 +52,10 @@ gem 'rails_admin_history_rollback', '~> 0.0.6'
 gem "wysiwyg-rails", '~> 1.2.8'
 
 # Upload file
-gem 'paperclip', '~> 4.3'
+gem 'paperclip', '~> 4.3.6'
+
+# Pagination
+gem 'kaminari', '~> 0.16.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

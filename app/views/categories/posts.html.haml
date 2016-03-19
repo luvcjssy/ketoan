@@ -43,20 +43,21 @@
                             .moto-widget.moto-widget-divider.moto-preset-default.moto-spacing-top-small.moto-spacing-right-auto.moto-spacing-bottom-small.moto-spacing-left-auto.moto-align-center{"data-divider-type" => "horizontal", "data-preset" => "default", "data-spacing" => "sasa"}
                               %hr.moto-widget-divider-line
               .moto-widget.moto-widget-pagination.moto-preset-default.clearfix.moto-spacing-top-small.moto-spacing-bottom-small
-                %ul.moto-pagination-group.moto-pagination-group_pages
-                  %li.moto-pagination-item.moto-pagination-item-page
-                    %span.moto-pagination-link.moto-pagination-link_active
-                      %span.moto-pagination-link-text 1
-                  %li.moto-pagination-item.moto-pagination-item-page
-                    %a.moto-pagination-link{:href => "/blog/?page=2"}
-                      %span.moto-pagination-link-text 2
-                %ul.moto-pagination-group.moto-pagination-group-controls.moto-pagination-group_right
-                  %li.moto-pagination-item.moto-pagination-item-control.moto-pagination-item-control_next
-                    %a.moto-pagination-link{:href => "/blog/?page=2"}
-                      %i.moto-pagination-link-icon.moto-pagination-link-text.fa.fa-angle-right
-                  %li.moto-pagination-item.moto-pagination-item-control.moto-pagination-item-control_last
-                    %a.moto-pagination-link{:href => "/blog/?page=2"}
-                      %i.moto-pagination-link-icon.moto-pagination-link-text.fa.fa-angle-double-right
+                = paginate @posts
+                / %ul.moto-pagination-group.moto-pagination-group_pages
+                /   %li.moto-pagination-item.moto-pagination-item-page
+                /     %span.moto-pagination-link.moto-pagination-link_active
+                /       %span.moto-pagination-link-text 1
+                /   %li.moto-pagination-item.moto-pagination-item-page
+                /     %a.moto-pagination-link{:href => "/blog/?page=2"}
+                /       %span.moto-pagination-link-text 2
+                / %ul.moto-pagination-group.moto-pagination-group-controls.moto-pagination-group_right
+                /   %li.moto-pagination-item.moto-pagination-item-control.moto-pagination-item-control_next
+                /     %a.moto-pagination-link{:href => "/blog/?page=2"}
+                /       %i.moto-pagination-link-icon.moto-pagination-link-text.fa.fa-angle-right
+                /   %li.moto-pagination-item.moto-pagination-item-control.moto-pagination-item-control_last
+                /     %a.moto-pagination-link{:href => "/blog/?page=2"}
+                /       %i.moto-pagination-link-icon.moto-pagination-link-text.fa.fa-angle-double-right
       .moto-cell.col-sm-3{"data-container" => "container"}
         .moto-widget.moto-widget-blog-recent_posts.moto-preset-default.moto-spacing-top-auto.moto-spacing-right-auto.moto-spacing-bottom-large.moto-spacing-left-auto{"data-spacing" => "aala", "data-widget" => "blog.recent_posts"}
           .moto-widget-blog-recent_posts-title
