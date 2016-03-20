@@ -6,6 +6,5 @@ class CreateRoles < ActiveRecord::Migration
       t.timestamps null: false
     end
 
-    Role.create(:name => 'superadmin')
   end
 end
