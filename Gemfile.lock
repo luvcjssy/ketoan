@@ -114,6 +114,7 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (= 0.3.0)
+    pg (0.18.4)
     rack (1.6.4)
     rack-pjax (0.8.0)
       nokogiri (~> 1.5)
@@ -225,6 +226,7 @@ DEPENDENCIES
   mysql2 (>= 0.3.13, < 0.5)
   paper_trail (~> 4.1.0)
   paperclip (~> 4.3.6)
+  pg
   rails (= 4.2.5)
   rails_admin (~> 0.8.1)
   rails_admin_history_rollback (~> 0.0.6)
