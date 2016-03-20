@@ -1,0 +1,36 @@
+.moto-widget.moto-widget-row.row-fixed{"data-widget" => "row"}
+  .container-fluid
+    .row
+      .moto-cell.col-sm-12{"data-container" => "container"}
+        .moto-widget.moto-widget-text.moto-preset-default.wow.fadeInLeft.moto-spacing-top-medium.moto-spacing-right-auto.moto-spacing-bottom-auto.moto-spacing-left-auto{"data-animation" => "fadeInLeft", "data-preset" => "default", "data-spacing" => "maaa", "data-widget" => "text", :style => "visibility: visible; animation-name: fadeInLeft;"}
+          .moto-widget-text-content.moto-widget-text-editable
+            %p.moto-text_system_4{:style => "text-align: center;"} 
+              Đăng nhập
+              %br/
+        .moto-widget.moto-widget-spacer.moto-preset-default.moto-spacing-top-auto.moto-spacing-right-auto.moto-spacing-bottom-medium.moto-spacing-left-auto{"data-preset" => "default", "data-spacing" => "aama", "data-widget" => "spacer"}
+          .moto-widget-spacer-block{:style => "height: 0px;"}
+        .moto-widget.moto-widget-text.moto-preset-default.wow.moto-spacing-top-auto.moto-spacing-right-auto.moto-spacing-bottom-large.moto-spacing-left-auto.fadeInRight
+          .moto-widget-text-content.moto-widget-text-editable
+            %p.moto-text_system_9{:style=>"text-align: center;"}
+              .moto-widget.moto-widget-row{"data-widget"=>"row"}
+                .container-fluid
+                  .row
+                    .moto-cell.col-md-6.col-md-offset-3{"data-container"=>"container"}
+                      .moto-widget.moto-widget-contact_form.moto-preset-default.moto-widget-empty.moto-spacing-top-auto.moto-spacing-right-auto.moto-spacing-bottom-large.moto-spacing-left-auto{"data-preset"=>"default", "data-widget"=>"contact_form", "data-type"=>"", "data-spacing"=>"aala"}
+                        .ng-scope
+                          = form_for(resource, as: resource_name, url: session_path(resource_name), :html => {class: 'moto-widget-contact_form-form'}) do |f|
+                            .moto-widget-contact_form-group
+                              .moto-widget-contact_form-group
+                                - flash.each do |name, msg|
+                                  = content_tag :div, msg, class: 'alert alert-danger'
+                                = f.email_field :email, autofocus: true, class: 'moto-widget-contact_form-field moto-widget-contact_form-input', placeholder: 'Địa chỉ email *'
+                              .moto-widget-contact_form-group
+                                = f.password_field :password, autocomplete: "off", class: 'moto-widget-contact_form-field moto-widget-contact_form-input', placeholder: 'Mật khẩu *'
+                              .moto-widget-contact_form-group
+                                - if devise_mapping.rememberable?
+                                  .field
+                                    = f.check_box :remember_me
+                                    = f.label "Nhớ mật khẩu"
+                              .moto-widget-contact_form-buttons
+                                = f.submit "Đăng nhập", class: 'btn-login'
+        
