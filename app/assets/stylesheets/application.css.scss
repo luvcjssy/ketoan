@@ -31,3 +31,45 @@
     font-size: 30px;
     line-height: 1;
 }
+
+// ========== FOR INDEX PAGE
+.image-index {
+  width: 370px !important;
+  height: 389px !important;
+}
+
+.link-index{
+
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.description-index {
+  text-align: center;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  height: 88px;
+}
+
+.tilte-new-post {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  height: 84px;
+}
+
+.description-new-post {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.div-new-post{
+  height: 165px;
+}

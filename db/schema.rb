@@ -16,20 +16,20 @@ ActiveRecord::Schema.define(version: 20160319061215) do
   create_table "categories", force: :cascade do |t|
     t.string   "title",      limit: 255
     t.integer  "order",      limit: 4
-    t.boolean  "active",                 default: true
-    t.integer  "parent_id",  limit: 4,   default: 0
-    t.datetime "created_at",                            null: false
-    t.datetime "updated_at",                            null: false
+    t.boolean  "active"
+    t.integer  "parent_id",  limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "posts", force: :cascade do |t|
     t.string   "title",                  limit: 255
-    t.text     "description",            limit: 65535
+    t.text     "description",            limit: 4294967295
     t.text     "content",                limit: 65535
-    t.boolean  "active",                               default: true
+    t.boolean  "active",                                    default: true
     t.integer  "category_id",            limit: 4
-    t.datetime "created_at",                                          null: false
-    t.datetime "updated_at",                                          null: false
+    t.datetime "created_at",                                               null: false
+    t.datetime "updated_at",                                               null: false
     t.string   "thumbnail_file_name",    limit: 255
     t.string   "thumbnail_content_type", limit: 255
     t.integer  "thumbnail_file_size",    limit: 4
