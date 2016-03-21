@@ -28,11 +28,11 @@
                       .moto-cell.col-sm-3{"data-container" => "container"}
                         .moto-widget.moto-widget-image.moto-preset-default.moto-align-center.moto-spacing-top-auto.moto-spacing-right-auto.moto-spacing-bottom-small.moto-spacing-left-auto.wow.fadeInDown{"data-preset" => "default", "data-spacing" => "aasa", "data-widget" => "image", :style => "visibility: visible; animation-name: fadeInDown;"}
                           .moto-widget-image-link
-                            %img.moto-widget-image-picture{:alt => "", "data-id" => "1165", :draggable => "false", :src => post.thumbnail.url(:large), :title => ""}
+                            %img.moto-widget-image-picture.post-category-image{:alt => "", "data-id" => "1165", :draggable => "false", :src => post.thumbnail.url(:large), :title => ""}
                         .moto-widget.moto-widget-text.moto-preset-default.wow.fadeInDown.moto-spacing-top-small.moto-spacing-right-auto.moto-spacing-bottom-auto.moto-spacing-left-auto{"data-animation" => "fadeInDown", "data-preset" => "default", "data-spacing" => "saaa", "data-widget" => "text", :style => "visibility: visible; animation-name: fadeInDown;"}
                           .moto-widget-text-content.moto-widget-text-editable
                             %p.moto-text_system_8{:style => "text-align: center;"}
-                              %a.moto-link{"data-action" => "url", "data-cke-saved-href" => "#", :href => post_path(post), :target=> "_self"}
+                              %a.moto-link.link-post-category{:title => post.title, "data-action" => "url", "data-cke-saved-href" => "#", :href => post_path(post), :target=> "_self"}
                                 = post.title
                               %br/
                         .moto-widget.moto-widget-spacer.moto-preset-default{"data-preset" => "default", "data-spacing" => "", "data-widget" => "spacer"}
@@ -41,6 +41,6 @@
                           %hr.moto-widget-divider-line{:style => "width: 100%;"}
                         .moto-widget.moto-widget-text.moto-preset-default.wow.fadeInDown.moto-spacing-top-small.moto-spacing-right-auto.moto-spacing-bottom-medium.moto-spacing-left-auto{"data-animation" => "fadeInDown", "data-preset" => "default", "data-spacing" => "sama", "data-widget" => "text", :style => "visibility: visible; animation-name: fadeInDown;"}
                           .moto-widget-text-content.moto-widget-text-editable
-                            %p.moto-text_system_10{:style => "text-align: center;"}
+                            %p.moto-text_system_10.description-post-category{:style => "text-align: center;"}
                               %span.moto-color2_3
                                 = post.description

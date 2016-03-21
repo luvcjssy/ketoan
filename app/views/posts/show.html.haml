@@ -51,7 +51,7 @@
                 %p.moto-text_system_7 Tin mới
           - recent_posts = Post.where(:active => true, :category_id => @post.category_id).order(:created_at =>'DESC').limit(5)
           - unless recent_posts.blank?
-            %ul.moto-widget-blog-recent_posts-list
+            %ul.moto-widget-blog-recent_posts-list.fix-layout
               - recent_posts.each do |recent_post|
                 %li.moto-widget-blog-recent_posts-item
                   .moto-widget-blog-recent_posts-item-preview
